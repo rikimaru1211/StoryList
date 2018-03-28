@@ -1,0 +1,312 @@
+/*COLOR Rules */
+/**KULER BASE**/
+.visible-phone {
+  display: none !important;
+}
+.visible-tablet {
+  display: none !important;
+}
+.hidden-desktop {
+  display: none !important;
+}
+.visible-desktop {
+  display: inherit !important;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important ;
+  }
+  .navbar {
+    overflow: visible;
+  }
+  .visible-tablet {
+    display: inherit !important;
+  }
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .navbar {
+    overflow: visible;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+}
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.navbar {
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  min-width: 520px;
+  height: 40px;
+  max-height: 40px;
+  background-color: #0b8c8c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0b8c8c), to(#0b8787));
+  background: -webkit-linear-gradient(top, #0b8c8c, #0b8787);
+  background: -moz-linear-gradient(top, #0b8c8c, #0b8787);
+  background: -ms-linear-gradient(top, #0b8c8c, #0b8787);
+  background: -o-linear-gradient(top, #0b8c8c, #0b8787);
+  border-bottom: 2px solid #0c9595;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.brand {
+  float: left;
+  padding: 0;
+  margin: 0;
+  padding: 1px 5px;
+  display: inline-block;
+}
+.nav {
+  padding: 0;
+  margin: 0;
+  display: block;
+  text-align: left;
+}
+.nav li {
+  position: relative;
+  height: 40px;
+  color: white;
+  display: block;
+  list-style: none;
+  float: left;
+  padding: 9px 15px;
+}
+.nav li a {
+  color: white;
+  text-decoration: none;
+}
+.nav li:first-child {
+  border-left: 1px solid #097474;
+}
+.nav li:nth-last-child(3) {
+  border-right: 1px solid #097474;
+}
+.nav li:hover,
+.active-drop {
+  background: #0da4a4;
+}
+.nav li:hover ul.dropdown-menu,
+.active-drop ul.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: #0b8c8c;
+  position: absolute;
+  z-index: 98;
+  top: 40px;
+  right: 0;
+  display: block;
+  width: 250px;
+}
+.nav li:hover ul.dropdown-menu li,
+.active-drop ul.dropdown-menu li {
+  width: 100%;
+  line-height: 20px;
+  border: none;
+  margin: 0;
+}
+.nav li.admin {
+  float: right;
+}
+.nav li.search {
+  width: 45px;
+  border-right: 1px solid #097474;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer */
+}
+.nav li.search:hover,
+.active-search {
+  width: 250px;
+}
+.navbar-search {
+  position: absolute;
+  top: 5px;
+  left: 45px;
+}
+.navbar-search input {
+  font-weight: 300;
+  font-size: 1em;
+  border: none;
+  background: #075d5d;
+  color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.icon-angle-down {
+  padding-left: 3px;
+}
+ul.dropdown-menu {
+  display: none;
+}
+.mobile-dropdown {
+  border-right: 1px solid #097474;
+}
+.mobile-dropdown:hover .mobile-menu,
+.active-drop .mobile-menu {
+  -webkit-transform: translate(0px, 0);
+  -moz-transform: translate(0px, 0);
+  -ms-transform: translate(0px, 0);
+  -o-transform: translate(0px, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer */
+}
+.mobile-dropdown:hover .mobile-admin,
+.active-drop .mobile-admin {
+  -webkit-transform: translate(0px, 0);
+  -moz-transform: translate(0px, 0);
+  -ms-transform: translate(0px, 0);
+  -o-transform: translate(0px, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer */
+}
+.mobile-admin {
+  position: fixed;
+  top: 40px;
+  bottom: 0;
+  right: 0px;
+  display: block;
+  width: 280px;
+  background: #0b8c8c;
+  overflow: hidden;
+  -webkit-transform: translate(330px, 0);
+  -moz-transform: translate(330px, 0);
+  -ms-transform: translate(330px, 0);
+  -o-transform: translate(330px, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.mobile-menu {
+  position: fixed;
+  top: 40px;
+  bottom: 0;
+  left: 0px;
+  display: block;
+  width: 300px;
+  background: #0b8c8c;
+  overflow: hidden;
+  -webkit-transform: translate(-330px, 0);
+  -moz-transform: translate(-330px, 0);
+  -ms-transform: translate(-330px, 0);
+  -o-transform: translate(-330px, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.admin-wrapper,
+.menu-wrapper {
+  overflow-y: scroll;
+  width: 390px;
+  height: 100%;
+}
+.mobile-admin ul.mobile-nav,
+.mobile-menu ul.mobile-nav {
+  position: relative;
+  right: 40px;
+  top: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  width: 100%;
+  border-left: 1px solid #0c9f9f;
+}
+.mobile-admin ul.mobile-nav li,
+.mobile-menu ul.mobile-nav li {
+  border: none;
+  padding-bottom: 0px;
+  border-top: 1px solid #0c9f9f;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+.mobile-menu ul.mobile-nav li:hover {
+  background: #0c9595;
+}
+.mobile-menu ul.mobile-nav li:hover ul.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: #0b8c8c;
+  position: relative;
+  z-index: 98;
+  top: 0;
+  right: 15px;
+  display: block;
+  width: 100%;
+}
+.mobile-menu ul.mobile-nav li:hover ul.dropdown-menu li {
+  width: 100%;
+  line-height: inherit;
+  border-top: 1px solid #0c9f9f;
+  margin: 0;
+}
+.mobile-menu ul.mobile-nav li ul.dropdown-menu {
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: #0c9595;
+  position: relative;
+  z-index: 98;
+  top: 0;
+  right: 15px;
+  width: 100%;
+}
+.mobile-menu ul.mobile-nav li ul.dropdown-menu li {
+  font-size: .9em;
+  font-weight: 300;
+  display: inline-block;
+  width: 100%;
+  line-height: inherit;
+  border-top: 1px solid #0c9f9f;
+  margin: 0;
+}

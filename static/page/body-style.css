@@ -1,0 +1,38 @@
+body {
+    font-family: Arial,"Open Sans",sans-serif;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+}
+.content {
+	margin: 15px;
+	border: none;
+}
+
+.list-truyen {
+	color: #ccc;
+	list-style-type: none;
+}
+
+.list-truyen li {
+	position: relative;
+	font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
+	margin-bottom: 20px;
+}
+
+.list-truyen li p {
+	font: 15px/1.5 Helvetica, sans-serif;
+	padding-left: 90px;
+	color: #555;
+}
+
+.list-truyen .ten-truyen {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #555;
+}
+
+.list-truyen .stt {
+	position: absolute;
+}

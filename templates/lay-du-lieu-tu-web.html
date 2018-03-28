@@ -1,0 +1,12 @@
+{% extends "web-template.html" %}
+{% from "control/form.html" import render_field %}
+{% block import %}<link href="{{ url_for('static', filename='form/form.css') }}" rel="stylesheet">{% endblock %}
+{% block title %}lay du lieu phan tu{% endblock %}
+{% block content %}
+    <div>
+	<form method=post action="/lay-du-lieu-tu-web">
+		{{ render_field(form.fields) }}
+		<p><input type=submit value=Register>
+	</form>
+    </div>
+{% endblock %}

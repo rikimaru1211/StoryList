@@ -1,0 +1,29 @@
+{% extends "web-template.html" %}
+{% import "control/pagination.html" as Paging %}
+{% block import %}<link href="{{ url_for('static', filename='pagination/pagination.css') }}" rel="stylesheet">{% endblock %}
+{% block title %}list phan tu{% endblock %}
+{% block content %}
+    <div>
+
+		<ul class="list-truyen">
+		{% for vTruyen in lstTruyen %}
+			<li>
+				<span class="stt">{{ vTruyen.stt }}.</span>
+				<p>
+					<a class="ten-truyen" href="#">{{ vTruyen.tenhienthi }}</a><br/>
+					Số chương: {{ vTruyen.sochuong }}<br/>
+					Nguồn: {{ vTruyen.manguon }}<br/>
+					Link gốc: {{ vTruyen.urlgoc }}<br/>
+					Download: <a href="/download-txt/{{ vTruyen.matruyen }}">TXT</a> | <a href="/download-epub/{{ vTruyen.matruyen }}">EPUB</a><br/>
+					Thao tác: <a href="/delete/{{ vTruyen.matruyen }}" onclick="return window.confirm('Đồng ý xóa ?')">xóa</a><br/>
+				</p>
+			</li>
+		{% endfor %}
+		</ul>
+
+    </div>
+
+    <div>
+    	{{ Paging.render_pagination(pagination) }}
+    </div>
+{% endblock %}
